@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply bg-black text-white antialiased;
+  }
+}
+
+@layer utilities {
+  .text-gold {
+    @apply text-[#D4AF37];
+  }
+  
+  .bg-gold {
+    @apply bg-[#D4AF37];
+  }
+  
+  .border-gold {
+    @apply border-[#D4AF37];
+  }
+}
