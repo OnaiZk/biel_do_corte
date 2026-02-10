@@ -5,91 +5,91 @@ export const SERVICES: Service[] = [
   {
     id: '1',
     name: 'Corte Masculino',
-    description: 'Corte tradicional masculino com acabamento profissional.',
+    description: 'Corte tradicional ou degradê com acabamento impecável.',
     price: 'R$ 35,00',
     duration: '30 min'
   },
   {
     id: '2',
     name: 'Barba',
-    description: 'Modelagem e aparagem de barba com toalha quente.',
+    description: 'Aparagem e modelagem completa com toalha quente.',
     price: 'R$ 25,00',
     duration: '20 min'
   },
   {
     id: '3',
     name: 'Sobrancelha',
-    description: 'Design e aparagem de sobrancelhas masculinas.',
+    description: 'Design e limpeza das sobrancelhas.',
     price: 'R$ 10,00',
     duration: '10 min'
   },
   {
     id: '4',
     name: 'Bigode',
-    description: 'Aparagem e modelagem de bigode.',
+    description: 'Aparagem e contorno do bigode.',
     price: 'R$ 5,00',
     duration: '10 min'
   },
   {
     id: '5',
     name: 'Pezinho',
-    description: 'Acabamento na nuca e contorno.',
+    description: 'Contorno e acabamento da nuca.',
     price: 'R$ 15,00',
     duration: '10 min'
   },
   {
     id: '6',
     name: 'Penteado',
-    description: 'Penteado para eventos e ocasiões especiais.',
+    description: 'Estilização para eventos e ocasiões.',
     price: 'R$ 25,00',
     duration: '20 min'
   },
   {
     id: '7',
     name: 'Alisante',
-    description: 'Tratamento de alisamento capilar.',
+    description: 'Tratamento para redução de volume.',
     price: 'R$ 30,00',
     duration: '45 min'
   },
   {
     id: '8',
     name: 'Progressiva',
-    description: 'Escova progressiva para cabelos lisos e alinhados.',
+    description: 'Tratamento para cabelos lisos e alinhados.',
     price: 'R$ 70,00',
     duration: '90 min'
   },
   {
     id: '9',
     name: 'Botox',
-    description: 'Tratamento de botox capilar para hidratação profunda.',
+    description: 'Hidratação profunda e redução de frizz.',
     price: 'R$ 60,00',
     duration: '60 min'
   },
   {
     id: '10',
     name: 'Luzes',
-    description: 'Mechas e luzes para um visual moderno.',
+    description: 'Mechas e reflexos para um visual moderno.',
     price: 'R$ 70,00',
     duration: '90 min'
   },
   {
     id: '11',
     name: 'Platinado',
-    description: 'Descoloração completa para cabelo platinado.',
+    description: 'Descoloração total para tom platinado.',
     price: 'R$ 130,00',
     duration: '120 min'
   },
   {
     id: '12',
     name: 'Hidratação',
-    description: 'Tratamento de hidratação para cabelos saudáveis.',
+    description: 'Tratamento intensivo para a saúde dos fios.',
     price: 'R$ 20,00',
     duration: '30 min'
   },
   {
     id: '13',
     name: 'Pigmentação',
-    description: 'Pigmentação capilar para cobertura de fios brancos.',
+    description: 'Cobertura de falhas ou fios brancos.',
     price: 'R$ 20,00',
     duration: '30 min'
   }

@@ -42,8 +42,16 @@ const MenuModal: React.FC<MenuModalProps> = ({ isOpen, onClose }) => {
                 {/* Content */}
                 <div className="p-4 sm:p-6">
                     <div className="space-y-5 sm:space-y-6">
-                        {!services ? (
-                            <div className="text-white text-center">Carregando...</div>
+                        {services === undefined ? (
+                            <div className="py-12 flex flex-col items-center justify-center gap-3">
+                                <div className="h-6 w-6 border-2 border-white/20 border-t-white rounded-full animate-spin"></div>
+                                <span className="text-white/40 text-[10px] uppercase tracking-[0.2em]">Sincronizando Cardápio...</span>
+                            </div>
+                        ) : services.length === 0 ? (
+                            <div className="py-12 text-center">
+                                <p className="text-gray-500 font-serif italic mb-2">O cardápio está sendo atualizado.</p>
+                                <p className="text-[9px] text-gray-600 uppercase tracking-widest">Confira novamente em instantes.</p>
+                            </div>
                         ) : services.map((service) => (
                             <div
                                 key={service._id}

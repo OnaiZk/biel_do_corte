@@ -34,15 +34,15 @@ const Testimonials: React.FC = () => {
     };
 
     return (
-        <div ref={ref} className={`py-20 px-6 md:px-12 bg-black border-t border-white/5 transition-all duration-1000 transform ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+        <div ref={ref} className={`py-16 sm:py-24 px-8 md:px-12 bg-black border-t border-white/5 transition-all duration-1000 transform ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
             <div className="max-w-7xl mx-auto">
                 <div className="text-center mb-16">
-                    <h2 className="text-white/60 uppercase tracking-[0.3em] text-[10px] mb-3">DEPOIMENTOS</h2>
-                    <h3 className="font-serif text-3xl md:text-5xl mb-6">O Que Dizem Nossos Clientes</h3>
+                    <h2 className="text-white/60 uppercase tracking-[0.3em] text-[11px] sm:text-xs mb-3 font-bold">Feedback</h2>
+                    <h3 className="font-serif text-4xl md:text-5xl mb-8 uppercase">Depoimentos</h3>
 
                     <button
                         onClick={() => setIsModalOpen(true)}
-                        className="text-xs uppercase tracking-widest text-[#D4AF37] border border-[#D4AF37]/30 px-6 py-3 hover:bg-[#D4AF37] hover:text-black transition-all"
+                        className="text-[11px] sm:text-xs uppercase tracking-widest text-[#D4AF37] border border-[#D4AF37]/30 px-8 py-4 hover:bg-[#D4AF37] hover:text-black transition-all"
                     >
                         Deixar uma Avaliação
                     </button>

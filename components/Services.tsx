@@ -11,12 +11,12 @@ const Services: React.FC<ServicesProps> = ({ onMenuClick }) => {
   const gallery = useQuery(api.gallery.getGallery);
 
   return (
-    <div className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 md:px-12 bg-black">
+    <div className="py-16 sm:py-20 px-6 sm:px-12 bg-black">
       <div className="max-w-7xl mx-auto text-center">
-        <h2 className="text-white/60 uppercase tracking-[0.2em] sm:tracking-[0.3em] text-[9px] sm:text-[10px] mb-2 sm:mb-3">O CARDÁPIO</h2>
-        <h3 className="font-serif text-2xl sm:text-3xl md:text-5xl mb-4 sm:mb-6">Serviços Exclusivos</h3>
-        <p className="text-gray-500 text-xs sm:text-sm font-light italic leading-relaxed max-w-xl mx-auto mb-6 sm:mb-10 px-2 sm:px-0">
-          Oferecemos uma variedade de serviços para cuidar do seu visual.
+        <h2 className="text-white/60 uppercase tracking-[0.2em] sm:tracking-[0.3em] text-[11px] sm:text-xs mb-3 sm:mb-4 font-bold">Nossos Serviços</h2>
+        <h3 className="font-serif text-3xl sm:text-4xl md:text-5xl mb-6 sm:mb-8 uppercase">Escolha seu Corte</h3>
+        <p className="text-gray-500 text-sm sm:text-base font-medium leading-relaxed max-w-xl mx-auto mb-8 sm:mb-12 px-2 sm:px-0">
+          Confira as opções de serviços disponíveis e agende seu horário.
         </p>
 
         <button
@@ -72,7 +72,7 @@ const Services: React.FC<ServicesProps> = ({ onMenuClick }) => {
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                   />
                   <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                    <span className="text-white text-sm uppercase tracking-wider">Dreads + Fade</span>
+                    <span className="text-white text-sm uppercase tracking-wider">Americano</span>
                   </div>
                 </div>
                 <div className="group relative aspect-square overflow-hidden">
@@ -82,7 +82,7 @@ const Services: React.FC<ServicesProps> = ({ onMenuClick }) => {
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                   />
                   <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                    <span className="text-white text-sm uppercase tracking-wider">Social</span>
+                    <span className="text-white text-sm uppercase tracking-wider">Penteado</span>
                   </div>
                 </div>
                 <div className="group relative aspect-square overflow-hidden">
@@ -98,7 +98,7 @@ const Services: React.FC<ServicesProps> = ({ onMenuClick }) => {
               </>
             )}
           </div>
-          <p className="mt-8 font-serif text-lg italic text-gray-400">"A excelência não é um ato, mas um hábito."</p>
+          <p className="mt-8 font-serif text-xl uppercase tracking-tighter text-gray-400">Qualidade e compromisso com seu visual.</p>
         </div>
       </div>
     </div>

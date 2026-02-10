@@ -6,12 +6,12 @@ const Location: React.FC = () => {
     const [ref, isVisible] = useIntersectionObserver();
 
     return (
-        <div id="location" ref={ref} className={`py-20 px-6 md:px-12 bg-[#050505] transition-all duration-1000 transform ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+        <div id="location" ref={ref} className={`py-16 sm:py-24 px-8 sm:px-12 bg-[#050505] transition-all duration-1000 transform ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
             <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
                 <div>
-                    <h2 className="text-white/60 uppercase tracking-[0.3em] text-[10px] mb-3">LOCALIZAÇÃO</h2>
-                    <h3 className="font-serif text-3xl md:text-5xl mb-6">Onde Estamos</h3>
-                    <p className="text-gray-400 text-sm leading-relaxed mb-8 font-light">
+                    <h2 className="text-white/60 uppercase tracking-[0.3em] text-[11px] mb-3">LOCALIZAÇÃO</h2>
+                    <h3 className="font-serif text-4xl md:text-5xl mb-6">Onde Estamos</h3>
+                    <p className="text-gray-400 text-base leading-relaxed mb-8 font-light">
                         Localizados no coração da cidade, oferecemos um ambiente confortável e exclusivo para você relaxar enquanto cuidamos do seu visual.
                         Fácil acesso e estacionamento disponível.
                     </p>
@@ -53,7 +53,7 @@ const Location: React.FC = () => {
                     </a>
                 </div>
 
-                <div className="h-[400px] w-full rounded-sm overflow-hidden grayscale hover:grayscale-0 transition-all duration-700 relative group">
+                <div className="h-[300px] md:h-[400px] w-full rounded-sm overflow-hidden grayscale hover:grayscale-0 transition-all duration-700 relative group">
                     <iframe
                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.974907106367!2d-46.4678847!3d-23.5693441!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce66f5a3a7b3b3%3A0x8690a5a3a7b3b3!2sR.%20Lorenzo%20Fiorentini%2C%20145%20-%20Jardim%20Pedra%20Branca%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2003923-030!5e0!3m2!1spt-BR!2sbr!4v1709845000000!5m2!1spt-BR!2sbr"
                         width="100%"

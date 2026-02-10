@@ -193,19 +193,31 @@ const BookingModal: React.FC<BookingModalProps> = ({ isOpen, onClose, onPortalOp
             ✕
           </button>
 
-          <div className="p-5 sm:p-8 md:p-12">
-            <h2 className="text-white/60 uppercase tracking-[0.2em] sm:tracking-[0.3em] text-[9px] sm:text-[10px] mb-2 sm:mb-3 text-center">RESERVA</h2>
-            <h3 className="font-serif text-2xl sm:text-3xl mb-6 sm:mb-10 text-center">Agende seu horário</h3>
+          <div className="p-6 sm:p-8 md:p-12">
+            <h2 className="text-white/60 uppercase tracking-[0.2em] sm:tracking-[0.3em] text-[11px] sm:text-xs mb-3 text-center font-bold">RESERVA</h2>
+            <h3 className="font-serif text-3xl sm:text-4xl mb-8 sm:mb-12 text-center uppercase">Agende seu horário</h3>
 
             <form className="space-y-6 sm:space-y-8" onSubmit={handleSubmit}>
               {/* Seleção de Serviços com Multi-Seleção */}
               <div>
-                <label className="block text-[9px] uppercase tracking-widest text-gray-500 mb-3">
+                <label className="block text-[11px] uppercase tracking-widest text-gray-500 mb-4 font-bold">
                   Selecione os Serviços (pode escolher mais de um)
                 </label>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 max-h-[200px] overflow-y-auto pr-2 custom-scrollbar">
-                  {services.length === 0 ? (
-                    <div className="col-span-2 text-center text-gray-500 py-4 text-sm">Carregando serviços...</div>
+                  {services === undefined ? (
+                    <div className="col-span-2 text-center text-gray-500 py-8">
+                      <div className="animate-pulse flex flex-col items-center gap-2">
+                        <div className="h-4 w-4 border-2 border-white/20 border-t-white rounded-full animate-spin"></div>
+                        <span className="text-[10px] uppercase tracking-widest">Carregando serviços...</span>
+                      </div>
+                    </div>
+                  ) : services.length === 0 ? (
+                    <div className="col-span-2 text-center py-8 px-4 border border-dashed border-white/10">
+                      <p className="text-gray-500 text-sm mb-2">Nenhum serviço disponível no momento.</p>
+                      <p className="text-[10px] text-gray-600 uppercase tracking-widest leading-relaxed">
+                        O barbeiro ainda não configurou os serviços ou todos estão desativados.
+                      </p>
+                    </div>
                   ) : services.map(service => (
                     <label
                       key={service._id}

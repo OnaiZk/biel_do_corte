@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apresentação do Projeto - Biel do Corte</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Playfair+Display:wght@400;700&display=swap');
+
+        :root {
+            --primary: #000000;
+            --secondary: #1a1a1a;
+            --accent: #d4a373;
+            /* Gold-ish accent for barbershop feel */
+            --text: #333333;
+            --light-text: #666666;
+            --bg: #ffffff;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            background-color: #f5f5f5;
+            padding: 40px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .document-container {
+            width: 100%;
+            max-width: 210mm;
+            /* A4 width */
+            background: white;
+            padding: 60px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
+
+        /* Print styles */
+        @media print {
+            body {
+                background: none;
+                padding: 0;
+            }
+
+            .document-container {
+                box-shadow: none;
+                max-width: 100%;
+                padding: 40px;
+            }
+
+            .no-print {
+                display: none;
+            }
+        }
+
+        header {
+            border-bottom: 2px solid var(--primary);
+            padding-bottom: 20px;
+            margin-bottom: 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+        }
+
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 5px;
+            letter-spacing: -0.5px;
+        }
+
+        .subtitle {
+            font-size: 1rem;
+            color: var(--light-text);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: 600;
+        }
+
+        .date {
+            font-size: 0.9rem;
+            color: var(--light-text);
+        }
+
+        section {
+            margin-bottom: 35px;
+        }
+
+        h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            color: var(--primary);
+            border-left: 4px solid var(--accent);
+            padding-left: 15px;
+            margin-bottom: 20px;
+        }
+
+        h3 {
+            font-size: 1.1rem;
+            font-weight: 800;
+            margin-bottom: 10px;
+            color: var(--secondary);
+            display: flex;
+            align-items: center;
+        }
+
+        p {
+            margin-bottom: 15px;
+            font-weight: 300;
+        }
+
+        ul {
+            list-style: none;
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 10px;
+            position: relative;
+        }
+
+        li::before {
+            content: "•";
+            color: var(--accent);
+            font-weight: bold;
+            display: inline-block;
+            width: 1em;
+            margin-left: -1em;
+        }
+
+        .highlight-box {
+            background-color: #f9f9f9;
+            border: 1px solid #eee;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+
+        .tech-tags {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-top: 10px;
+        }
+
+        .tag {
+            background: var(--secondary);
+            color: white;
+            padding: 4px 10px;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        footer {
+            margin-top: 60px;
+            text-align: center;
+            font-size: 0.8rem;
+            color: var(--light-text);
+            border-top: 1px solid #eee;
+            padding-top: 20px;
+        }
+
+        .print-btn {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: var(--primary);
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 50px;
+            font-weight: 600;
+            cursor: pointer;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .print-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+        }
+    </style>
+</head>
+
+<body>
+
+    <button onclick="window.print()" class="print-btn no-print">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="6 9 6 2 18 2 18 9"></polyline>
+            <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path>
+            <rect x="6" y="14" width="12" height="8"></rect>
+        </svg>
+        Salvar como PDF / Imprimir
+    </button>
+
+    <div class="document-container">
+        <header>
+            <div>
+                <h1>Biel do Corte</h1>
+                <div class="subtitle">Apresentação do Projeto</div>
+            </div>
+            <div class="date">Fevereiro 2026</div>
+        </header>
+
+        <section>
+            <h2>Visão Geral</h2>
+            <p>O projeto <strong>Biel do Corte</strong> não é apenas um site de agendamentos; é uma plataforma completa
+                de gestão e experiência do cliente. Desenvolvida com as tecnologias mais modernas do mercado, a
+                plataforma garante velocidade, estabilidade e um design premium.</p>
+            <p>O objetivo é elevar a percepção de valor da barbearia, oferecendo aos clientes uma experiência de uso
+                fluida e, ao barbeiro, ferramentas poderosas de controle e gestão.</p>
+        </section>
+
+        <section>
+            <h2>Diferenciais para o Cliente</h2>
+            <div class="highlight-box">
+                <h3>✨ Consultor de Estilo com IA</h3>
+                <p>Um diferencial exclusivo no mercado: Um chat integrado com Inteligência Artificial (Google Gemini)
+                    que atua como um "Visagista Digital". O cliente descreve suas características e o que busca, e a IA
+                    sugere cortes ideais, criando engajamento antes mesmo do cliente sentar na cadeira.</p>
+            </div>
+            <br>
+            <ul>
+                <li><strong>Agendamento Simplificado e Intuitivo:</strong> Sistema de reserva rápido, sem necessidade de
+                    login complexo, com visualização clara de horários em tempo real.</li>
+                <li><strong>Pagamento Moderno:</strong> Integração visual com PIX para facilitar pagamentos antecipados
+                    ou no local.</li>
+                <li><strong>Design Premium e Responsivo:</strong> Layout "Dark Mode" sofisticado, com tipografia
+                    elegante e animações sutis. Funciona perfeitamente em qualquer dispositivo (Celular, Tablet ou
+                    Computador).</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Painel do Barbeiro (Gestão)</h2>
+            <p>Para o profissional, o site funciona como um sistema operacional do negócio.</p>
+            <ul>
+                <li><strong>Dashboard em Tempo Real:</strong> Acompanhamento instantâneo de métricas vitais como
+                    Faturamento, Total de Atendimentos e Cancelamentos.</li>
+                <li><strong>Controle Total da Agenda:</strong> Visualização da lista de clientes do dia, funcionalidades
+                    de check-in e gestão de cancelamentos.</li>
+                <li><strong>Gestão de Conteúdo:</strong> Capacidade de gerenciar a Galeria de Fotos e os Serviços
+                    oferecidos diretamente pelo painel administrativo.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Tecnologia de Ponta</h2>
+            <p>O projeto foi construído sobre uma base tecnológica robusta, utilizada pelas maiores empresas de
+                tecnologia do mundo.</p>
+            <div class="tech-tags">
+                <span class="tag">Next.js & React</span>
+                <span class="tag">Tailwind CSS</span>
+                <span class="tag">Convex DB (Realtime)</span>
+                <span class="tag">Google Gemini AI</span>
+            </div>
+            <br>
+            <p><small>Isso garante que o site seja extremamente rápido, otimizado para o Google (SEO) e capaz de
+                    sincronizar dados em tempo real entre todos os usuários.</small></p>
+        </section>
+
+        <section>
+            <h2>Conclusão</h2>
+            <p>O <strong>Biel do Corte</strong> posiciona a barbearia em um novo patamar digital. Mais do que um "cartão
+                de visitas", é uma ferramenta ativa de vendas e fidelização. A combinação de um Design de Alto Padrão
+                com funcionalidades inovadoras como a IA de Estilo cria uma barreira de entrada para concorrentes e
+                valoriza a marca da barbearia.</p>
+        </section>
+
+        <footer>
+            Biel do Corte © 2026 - Documento confidencial de apresentação de projeto.
+        </footer>
+    </div>
+
+</body>
+
+</html>

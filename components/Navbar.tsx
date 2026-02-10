@@ -35,7 +35,7 @@ const Navbar: React.FC<NavbarProps> = ({ onBookClick, onPortalClick }) => {
         <div className="flex items-center gap-2 sm:gap-4">
           <button
             onClick={onPortalClick}
-            className="text-white/60 hover:text-white px-2 py-2 text-[9px] sm:text-[10px] font-bold uppercase tracking-wider sm:tracking-widest transition-colors"
+            className="text-white/60 hover:text-white px-3 py-2 text-[11px] sm:text-xs font-bold uppercase tracking-wider sm:tracking-widest transition-colors"
           >
             Meus Agendamentos
           </button>
@@ -44,7 +44,7 @@ const Navbar: React.FC<NavbarProps> = ({ onBookClick, onPortalClick }) => {
             <UserButton afterSignOutUrl="/" />
           ) : (
             <SignInButton mode="modal">
-              <button className="text-white/60 hover:text-white px-3 py-2 text-[9px] sm:text-[10px] font-bold uppercase tracking-wider sm:tracking-widest transition-colors">
+              <button className="text-white/60 hover:text-white px-3 py-2 text-[11px] sm:text-xs font-bold uppercase tracking-wider sm:tracking-widest transition-colors">
                 Entrar
               </button>
             </SignInButton>
@@ -52,7 +52,7 @@ const Navbar: React.FC<NavbarProps> = ({ onBookClick, onPortalClick }) => {
 
           <button
             onClick={onBookClick}
-            className="bg-white text-black px-3 sm:px-5 py-2 text-[9px] sm:text-[10px] font-bold uppercase tracking-wider sm:tracking-widest hover:bg-gray-100 active:scale-95 transition-all whitespace-nowrap"
+            className="bg-white text-black px-4 sm:px-6 py-2.5 text-[11px] sm:text-xs font-bold uppercase tracking-wider sm:tracking-widest hover:bg-gray-100 active:scale-95 transition-all whitespace-nowrap"
           >
             Agendar
           </button>

@@ -4,7 +4,10 @@ import { mutation, query } from "./_generated/server";
 export const getServices = query({
     args: {},
     handler: async (ctx) => {
-        return await ctx.db.query("services").filter(q => q.eq(q.field("active"), true)).collect();
+        return await ctx.db
+            .query("services")
+            .withIndex("by_active", (q) => q.eq("active", true))
+            .collect();
     },
 });
 
