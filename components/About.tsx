@@ -16,7 +16,7 @@ const About: React.FC = () => {
                     <div className="w-full md:w-1/2 relative group">
                         <div className="relative aspect-[4/5] sm:aspect-[3/4] w-full max-w-md mx-auto overflow-hidden rounded-sm border border-white/10">
                             <img
-                                src="/barbeiro.jpg"
+                                src="/barbeiro2.jpeg"
                                 alt="Biel do Corte"
                                 className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700"
                             />

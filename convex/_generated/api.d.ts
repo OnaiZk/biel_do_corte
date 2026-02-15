@@ -10,6 +10,8 @@
 
 import type * as appointments from "../appointments.js";
 import type * as gallery from "../gallery.js";
+import type * as http from "../http.js";
+import type * as mercadopago from "../mercadopago.js";
 import type * as reviews from "../reviews.js";
 import type * as services from "../services.js";
 
@@ -22,6 +24,8 @@ import type {
 declare const fullApi: ApiFromModules<{
   appointments: typeof appointments;
   gallery: typeof gallery;
+  http: typeof http;
+  mercadopago: typeof mercadopago;
   reviews: typeof reviews;
   services: typeof services;
 }>;

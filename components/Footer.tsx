@@ -104,6 +104,9 @@ const Footer: React.FC<FooterProps> = ({ onAdminClick }) => {
           <p className="text-[9px] text-gray-700 uppercase tracking-widest">
             © 2026 BIEL DO CORTE. TODOS OS DIREITOS RESERVADOS.
           </p>
+          <p className="text-[9px] text-gray-700 uppercase tracking-widest">
+            Desenvolvido por <a href="mailto:mouracassiano410@gmail.com" className="hover:text-white transition-colors">Cassiano Silva</a>
+          </p>
         </div>
       </div>
     </footer>
