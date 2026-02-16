@@ -9,7 +9,7 @@ import MenuModal from './components/MenuModal';
 import Footer from './components/Footer';
 import BarberDashboard from './components/BarberDashboard';
 import BarberLogin from './components/BarberLogin';
-import StyleConsultant from './components/StyleConsultant';
+
 import Location from './components/Location';
 import Testimonials from './components/Testimonials';
 import ClientPortal from './components/ClientPortal';
@@ -72,10 +72,10 @@ const App: React.FC = () => {
       {paymentToast && (
         <div className="fixed top-4 left-1/2 -translate-x-1/2 z-[200] animate-fade-in">
           <div className={`px-6 py-3 border shadow-2xl backdrop-blur-sm text-sm font-medium ${paymentToast.includes('sucesso')
-              ? 'bg-green-500/20 border-green-500/40 text-green-300'
-              : paymentToast.includes('pendente')
-                ? 'bg-yellow-500/20 border-yellow-500/40 text-yellow-300'
-                : 'bg-red-500/20 border-red-500/40 text-red-300'
+            ? 'bg-green-500/20 border-green-500/40 text-green-300'
+            : paymentToast.includes('pendente')
+              ? 'bg-yellow-500/20 border-yellow-500/40 text-yellow-300'
+              : 'bg-red-500/20 border-red-500/40 text-red-300'
             }`}>
             {paymentToast}
           </div>
@@ -95,9 +95,7 @@ const App: React.FC = () => {
           <Services onMenuClick={() => setIsMenuOpen(true)} />
         </section>
 
-        <section id="consultant" className="bg-[#121212] py-20">
-          <StyleConsultant />
-        </section>
+
 
         <Testimonials />
         <Location />

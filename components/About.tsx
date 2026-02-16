@@ -35,7 +35,7 @@ const About: React.FC = () => {
 
                         <div className="space-y-6 text-gray-400 font-medium leading-relaxed text-base sm:text-lg">
                             <p>
-                                Com mais de 5 anos de experiência no mercado, Gabriel Kaiky, o "Biel do Corte",
+                                Com mais de 3 anos de experiência no mercado, Gabriel Kaiky, o "Biel do Corte",
                                 é referência em cortes e atendimento de qualidade na região.
                             </p>
                             <p>

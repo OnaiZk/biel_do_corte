@@ -85,12 +85,12 @@ const Footer: React.FC<FooterProps> = ({ onAdminClick }) => {
             <h4 className="text-white uppercase tracking-widest text-[11px] font-bold mb-8">HORÁRIOS</h4>
             <div className="space-y-4 text-[15px] text-gray-500 font-light">
               <div className="flex justify-between">
-                <span>Ter - Sex</span>
-                <span>09h - 21h</span>
+                <span>Ter - Sab</span>
+                <span>09h - 20h</span>
               </div>
               <div className="flex justify-between">
-                <span>Sábado - Dom</span>
-                <span>09h - 18h</span>
+                <span>Domingo</span>
+                <span>09h - 15h</span>
               </div>
               <div className="flex justify-between">
                 <span>Segunda</span>

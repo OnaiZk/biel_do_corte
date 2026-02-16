@@ -38,7 +38,7 @@ const Location: React.FC = () => {
                             </div>
                             <div>
                                 <h4 className="text-white font-medium mb-1">Horário de Funcionamento</h4>
-                                <p className="text-gray-500 text-sm">Terça a Domingo: 09:00 - 20:00<br />Segunda: Fechado</p>
+                                <p className="text-gray-500 text-sm">Terça a Sabado: 09:00 - 20:00<br />Segunda: Fechado</p>
                             </div>
                         </div>
                     </div>
