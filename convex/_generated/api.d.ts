@@ -14,6 +14,7 @@ import type * as http from "../http.js";
 import type * as mercadopago from "../mercadopago.js";
 import type * as reviews from "../reviews.js";
 import type * as services from "../services.js";
+import type * as whatsapp from "../whatsapp.js";
 
 import type {
   ApiFromModules,
@@ -28,6 +29,7 @@ declare const fullApi: ApiFromModules<{
   mercadopago: typeof mercadopago;
   reviews: typeof reviews;
   services: typeof services;
+  whatsapp: typeof whatsapp;
 }>;
 
 /**

@@ -1,4 +1,5 @@
 import { mutation, query } from "./_generated/server";
+import { internal } from "./_generated/api";
 import { v } from "convex/values";
 
 // Create a new appointment
@@ -46,6 +47,14 @@ export const createAppointment = mutation({
             userId: identity.subject as any, // Using subject (Clerk ID) as userId
             paymentStatus: args.paymentStatus || "pending",
             createdAt: Date.now(),
+        });
+
+        // Trigger WhatsApp Notification
+        await ctx.scheduler.runAfter(0, (internal as any).whatsapp.sendBookingNotification, {
+            clientName: args.clientName,
+            serviceName: args.serviceName,
+            date: args.date,
+            time: args.time,
         });
 
         return appointmentId;
