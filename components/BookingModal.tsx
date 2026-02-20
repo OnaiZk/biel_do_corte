@@ -24,7 +24,7 @@ const BookingModal: React.FC<BookingModalProps> = ({ isOpen, onClose, onPortalOp
   // Form states - agora com multi-seleção
   const [selectedServiceIds, setSelectedServiceIds] = useState<string[]>([]);
   const [date, setDate] = useState(new Date().toISOString().split('T')[0]);
-  const [time, setTime] = useState('09:00');
+  const [time, setTime] = useState('08:00');
   const [isLoading, setIsLoading] = useState(false);
 
   const createAppointment = useMutation(api.appointments.createAppointment);
@@ -272,7 +272,7 @@ const BookingModal: React.FC<BookingModalProps> = ({ isOpen, onClose, onPortalOp
                     onChange={(e) => setTime(e.target.value)}
                     className="w-full bg-transparent border-b border-white/20 pb-2 focus:outline-none focus:border-white transition-colors appearance-none text-sm cursor-pointer"
                   >
-                    {['09:00', '10:00', '11:00', '13:00', '14:00', '15:00', '16:00', '17:00', '18:00', '19:00'].map(t => (
+                    {['08:00', '09:00', '10:00', '11:00', '12:00', '13:00', '14:00', '15:00', '16:00', '17:00', '18:00', '19:00', '20:00'].map(t => (
                       <option
                         key={t}
                         value={t}
