@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { useAction } from 'convex/react';
+import { api } from '../convex/_generated/api';
 
 interface BarberLoginProps {
     isOpen: boolean;
@@ -10,6 +12,7 @@ const BarberLogin: React.FC<BarberLoginProps> = ({ isOpen, onClose, onSuccess })
     const [pin, setPin] = useState('');
     const [error, setError] = useState('');
     const [isLoading, setIsLoading] = useState(false);
+    const checkPinAction = useAction(api.auth.checkPin);
 
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
@@ -19,15 +22,20 @@ const BarberLogin: React.FC<BarberLoginProps> = ({ isOpen, onClose, onSuccess })
         // Small delay for UX
         await new Promise(resolve => setTimeout(resolve, 300));
 
-        const correctPin = import.meta.env.VITE_BARBER_PIN || '1234';
+        try {
+            const isCorrect = await checkPinAction({ pin });
 
-        if (pin === correctPin) {
-            // Store session (expires on tab close)
-            sessionStorage.setItem('barber_authenticated', 'true');
-            setPin('');
-            onSuccess();
-        } else {
-            setError('PIN incorreto. Tente novamente.');
+            if (isCorrect) {
+                // Store session (expires on tab close)
+                sessionStorage.setItem('barber_authenticated', 'true');
+                setPin('');
+                onSuccess();
+            } else {
+                setError('PIN incorreto. Tente novamente.');
+                setPin('');
+            }
+        } catch (err) {
+            setError('Erro ao verificar PIN.');
             setPin('');
         }
 
