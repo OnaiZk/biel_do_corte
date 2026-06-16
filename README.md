@@ -1,20 +1,37 @@
 <div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
+  <h1>Biel do Corte</h1>
+  <p>Professional Web Application</p>
 </div>
 
-# Run and deploy your AI Studio app
+<br />
 
-This contains everything you need to run your app locally.
+## About the Project
 
-View your app in AI Studio: https://ai.studio/apps/drive/1_ggzjordEFh_S0nYmeoLe0g9-dhNT8Vh
+Biel do Corte is a corporate web application designed to provide an elegant and professional online presence. Built with modern web technologies, it focuses on performance, aesthetics, and delivering an exceptional user experience.
 
-## Run Locally
+## Key Features
 
-**Prerequisites:**  Node.js
+* **Modern Interface:** Clean, intuitive, and responsive design tailored for seamless operation across all devices.
+* **High Performance:** Optimized architecture ensuring fast loading times and smooth interactions.
+* **Scalable Foundation:** Structured codebase designed to accommodate future growth and additional features.
 
+## Technology Stack
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+This application is built utilizing industry-standard technologies to ensure reliability and maintainability:
+
+* **Framework:** React
+* **Language:** TypeScript
+* **Build Tool:** Vite
+* **Styling:** CSS
+
+## Project Structure
+
+The repository is organized following best practices for modern web development:
+
+* `/components`: Modular and reusable UI elements.
+* `/contexts`: Application state management.
+* `/hooks`: Custom React hooks for business logic encapsulation.
+
+## License
+
+This project is proprietary software. Unauthorized copying, distribution, or use is strictly prohibited.
